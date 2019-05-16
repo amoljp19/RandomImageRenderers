@@ -15,9 +15,12 @@ import com.pedrogomez.renderers.Renderer;
 import com.softaai.randomimagerenderers.R;
 import com.softaai.randomimagerenderers.model.RandomImageResponse;
 
+import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 import java.security.DigestInputStream;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -68,10 +71,24 @@ public abstract class RandomImageRenderer extends Renderer<RandomImageResponse> 
      * Main render algorithm based on render the image, render the date, render the sha256 value
      */
     @Override public void render() {
-        RandomImageResponse randomImageResponse = getContent();
+        final RandomImageResponse randomImageResponse = getContent();
         renderDate();
         renderImage(randomImageResponse);
-        renderSha256(randomImageResponse);
+        try {
+            Thread tread = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        renderSha256(randomImageResponse);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
+            tread.start();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     protected void renderDate(){
@@ -110,24 +127,43 @@ public abstract class RandomImageRenderer extends Renderer<RandomImageResponse> 
 //    }
 
 
-    protected String getSha256(RandomImageResponse randomImageResponse) {
-        MessageDigest md = null; //SHA, MD2, MD5, SHA-256, SHA-384...
-        String hex = null;
-        try {
-            md = MessageDigest.getInstance("SHA-256");
-            hex = checksum(randomImageResponse.getDownloadUrl(), md);
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
 
-        return hex;
+    public byte[] createChecksum(String filename) throws Exception {
+        // read image from url
+        BufferedInputStream inputStream = new BufferedInputStream(new URL(filename).openStream());
+
+        InputStream fis =  inputStream;
+
+        byte[] buffer = new byte[1024];
+        MessageDigest complete = MessageDigest.getInstance("SHA-256");
+        int numRead;
+
+        do {
+            numRead = fis.read(buffer);
+            if (numRead > 0) {
+                complete.update(buffer, 0, numRead);
+            }
+        } while (numRead != -1);
+
+        fis.close();
+        return complete.digest();
     }
 
-    protected void renderSha256(RandomImageResponse randomImageResponse){
-        sha256.setText(getSha256(randomImageResponse));
+
+    // a byte array to a HEX string
+    public String getSha256Checksum(String filename) throws Exception {
+        byte[] b = createChecksum(filename);
+        String result = "";
+
+        for (int i=0; i < b.length; i++) {
+            result += Integer.toString( ( b[i] & 0xff ) + 0x100, 16).substring( 1 );
+        }
+        return result;
+    }
+
+    protected void renderSha256(RandomImageResponse randomImageResponse) throws Exception {
+        sha256.setText(getSha256Checksum(randomImageResponse.getDownloadUrl()));
+        sha256.setText("abcsdks;jsdlfjdslfjwefewqwe0924qd,wwd");
     }
 
 

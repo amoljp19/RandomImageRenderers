@@ -1,0 +1,25 @@
+
+@
+local.properties,0\7\0712df971a99ac4d2fccb8e0fb19f377f3374cca
+@
+app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+Å
+Qapp/src/main/java/com/softaai/randomimagerenderers/model/RandomImageResponse.java,5\6\565e3381d271441eb74573ffc8371b0c8f60b453
+É
+Sapp/src/main/java/com/softaai/randomimagerenderers/model/RandomImageCollection.java,9\3\93f17128ccc771e292cf08ce8e9a7746932cf842
+å
+\app/src/main/java/com/softaai/randomimagerenderers/model/RandomImageCollectionGenerator.java,0\1\0115e898e7efac4e7047aab4cb757fc8f22ff9e1
+Ç
+Rapp/src/main/java/com/softaai/randomimagerenderers/remote/RandomImagesService.java,5\e\5e6ecf6eacde248e6e3ec4ef45bcc0d300875e12
+~
+Napp/src/main/java/com/softaai/randomimagerenderers/remote/ResponseManager.java,f\6\f6ff38ad8e110fb5b6249dd3a68735dbaecf7508
+Ö
+Uapp/src/main/java/com/softaai/randomimagerenderers/remote/RetrofitClientInstance.java,a\c\acbfe58e3d1a0e15566f5da4ff1f813d9d621e88
+à
+Xapp/src/main/java/com/softaai/randomimagerenderers/renderers/RemovableImageRenderer.java,b\4\b449cc00c07288cfc2dfbb46de4a840cb9aa5694
+t
+Dapp/src/main/java/com/softaai/randomimagerenderers/MainActivity.java,f\f\ff7a0d8700e75222b42b68c4a64f45f23fd30086
+Ö
+Uapp/src/main/java/com/softaai/randomimagerenderers/renderers/RandomImageRenderer.java,b\3\b3d8407c5af0208a63542ee71326ef8ed262e5ce
