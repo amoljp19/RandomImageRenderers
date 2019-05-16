@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/AppTheme.RandomImage">
+
+    <TextView
+        android:id="@+id/tv_date"
+        style="@style/AppTheme.RandomImage.Date"/>
+
+    <ImageView
+        android:id="@+id/iv_random_image"
+        style="@style/AppTheme.RandomImage.Image"/>
+
+    <TextView
+        android:id="@+id/tv_sha256"
+        style="@style/AppTheme.RandomImage.Sha256"/>
+
+</RelativeLayout>
