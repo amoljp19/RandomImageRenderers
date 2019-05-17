@@ -163,7 +163,6 @@ public abstract class RandomImageRenderer extends Renderer<RandomImageResponse> 
 
     protected void renderSha256(RandomImageResponse randomImageResponse) throws Exception {
         sha256.setText(getSha256Checksum(randomImageResponse.getDownloadUrl()));
-        sha256.setText("abcsdks;jsdlfjdslfjwefewqwe0924qd,wwd");
     }
 
 
