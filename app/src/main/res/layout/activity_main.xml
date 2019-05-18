@@ -23,11 +23,11 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!--<include layout="@layout/place_holder" />-->
+            <include layout="@layout/place_holder" />
 
-            <!--<include layout="@layout/place_holder" />-->
+            <include layout="@layout/place_holder" />
 
-            <!--<include layout="@layout/place_holder" />-->
+            <include layout="@layout/place_holder" />
 
         </LinearLayout>
 
