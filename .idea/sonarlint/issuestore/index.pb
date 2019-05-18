@@ -23,3 +23,11 @@ t
 Dapp/src/main/java/com/softaai/randomimagerenderers/MainActivity.java,f\f\ff7a0d8700e75222b42b68c4a64f45f23fd30086
 …
 Uapp/src/main/java/com/softaai/randomimagerenderers/renderers/RandomImageRenderer.java,b\3\b3d8407c5af0208a63542ee71326ef8ed262e5ce
+A
+gradle.properties,2\a\2afbb999f001938c88fa43fc2ef52abf0f8213e4
+<
+build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
+~
+Napp/src/main/java/com/softaai/randomimagerenderers/renderers/DiffCallback.java,6\5\6568d24a28ead62b60111af59751027505e1245d
+}
+Mapp/src/main/java/com/softaai/randomimagerenderers/renderers/ItemAdapter.java,3\8\38d98acc6e9db5922603767ba96e698571a727de

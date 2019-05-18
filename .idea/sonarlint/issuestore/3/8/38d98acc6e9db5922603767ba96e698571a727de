@@ -1,0 +1,6 @@
+
+nsquid:UselessImportCheck"@Remove this unused import 'com.squareup.picasso.Transformation'.(»Èú‡úÿÿÿÿ8ı¥ÔÚ¬-
+tsquid:S3008"XRename this field "DIFF_CALLBACK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™–ì8æË—Ú¬-
+Osquid:S1068"3Remove this unused "rendererBuilder" private field.(ïğÒÒ8íİÑÛ¬-
+Bsquid:S1659"&Declare "tvSha256" on a separate line.(Í—ÆÜ8°®¶Ú¬-
+asquid:UselessImportCheck"3Remove this unused import 'android.graphics.Color'.(øãíòşÿÿÿÿ8ı¥ÔÚ¬-

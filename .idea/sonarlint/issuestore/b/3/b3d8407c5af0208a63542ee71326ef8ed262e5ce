@@ -1,9 +1,11 @@
 
-hsquid:S2147z"ECombine this catch with the one at line 119, which has the same body.(©΅ÿÿÿÿÿ8¥¬επ«-
-Fsquid:S1148x"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8¥¬επ«-
-ƒsquid:S1488"dImmediately return this expression instead of assigning it to the temporary variable "downloadDate".(Ίπ‰8‘µίο«-
-nsquid:CommentedOutCodeLinel"<This block of commented-out lines of code should be removed.(©λ—ÿύÿÿÿÿ8¨”θ«-
-Fsquid:S1148{"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8¥¬επ«-
-isquid:CommentedOutCodeLine‚"<This block of commented-out lines of code should be removed.(όί)8ΰ§ξπ«-
-Tsquid:UselessImportCheck")Remove this unused import 'java.io.File'.(†Π¥Ε8¥¬επ«-
-^squid:S1172":Remove this unused method parameter "randomImageResponse".(ϊΗ€ϊύÿÿÿÿ8Ή™οπ«-
+Dsquid:S1148"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8¥¬επ«-
+Dsquid:S1148"#Use a logger to log this exception.(€ΙΤ…ύÿÿÿÿ8¥¬επ«-
+Rsquid:UselessImportCheck")Remove this unused import 'java.io.File'.(†Π¥Ε8¥¬επ«-
+€squid:S1488"dImmediately return this expression instead of assigning it to the temporary variable "downloadDate".(Ίπ‰8‘µίο«-
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(©λ—ÿύÿÿÿÿ8¨”θ«-
+Vsquid:UnusedPrivateMethod"-Remove this unused private "checksum" method.(Ώε’8›ί–Φ¬-
+=squid:S1643"Use a StringBuilder instead.(Η”Ώόÿÿÿÿ8›ί–Φ¬-
+msquid:S2095"QUse try-with-resources or close this "BufferedInputStream" in a "finally" clause.(ΣΫμ8›ί–Φ¬-
+csquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(³’Βª8›ί–Φ¬-
+qsquid:UselessImportCheck"CRemove this unused import 'java.security.NoSuchAlgorithmException'.(ςΝΎώÿÿÿÿ8›ί–Φ¬-

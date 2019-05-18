@@ -1,15 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        shimmer:duration="800"
+        tools:ignore="MissingConstraints">
+
+        <!-- Adding 7 rows of placeholders -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--<include layout="@layout/place_holder" />-->
+
+            <!--<include layout="@layout/place_holder" />-->
+
+            <!--<include layout="@layout/place_holder" />-->
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_renderers"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
         style="@style/AppTheme.ListView"/>
+
+    <FrameLayout
+        android:id="@+id/retry_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <include layout="@layout/retry_no_connection_layout"/>
+    </FrameLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
