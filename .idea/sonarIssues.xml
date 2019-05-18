@@ -93,6 +93,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/softaai/randomimagerenderers/renderers/DiffCallback.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/softaai/randomimagerenderers/renderers/ItemAdapter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/softaai/randomimagerenderers/renderers/RandomImageRenderer.java">
           <value>
             <set />
@@ -134,6 +144,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/gradle.properties">
           <value>
             <set />
           </value>

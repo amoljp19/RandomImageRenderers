@@ -1,10 +1,11 @@
 package com.softaai.randomimagerenderers;
 
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.pedrogomez.renderers.AdapteeCollection;
 import com.pedrogomez.renderers.RVRendererAdapter;
@@ -12,6 +13,7 @@ import com.pedrogomez.renderers.RendererBuilder;
 import com.softaai.randomimagerenderers.model.RandomImageCollectionGenerator;
 import com.softaai.randomimagerenderers.model.RandomImageResponse;
 import com.softaai.randomimagerenderers.remote.ResponseManager;
+import com.softaai.randomimagerenderers.renderers.ItemAdapter;
 import com.softaai.randomimagerenderers.renderers.RemovableImageRenderer;
 
 import java.util.ArrayList;
@@ -28,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.rv_renderers)
     RecyclerView recyclerView;
 
-    private RVRendererAdapter<RandomImageResponse> adapter;
+   // private RVRendererAdapter<RandomImageResponse> adapter1;
+    private ItemAdapter adapter;
+
 
     RandomImageCollectionGenerator randomImageCollectionGenerator;
 
@@ -84,7 +88,9 @@ public class MainActivity extends AppCompatActivity {
                     }
                 })).bind(RandomImageResponse.class, RemovableImageRenderer.class);
 
-        adapter = new RVRendererAdapter<>(rendererBuilder, randomImageCollection);
+        //adapter = new RVRendererAdapter<>(rendererBuilder, randomImageCollection);
+//        adapter = new ItemAdapter(this);
+        adapter = new ItemAdapter(rendererBuilder, randomImageCollection);
     }
 
     /**

@@ -24,7 +24,7 @@ public class ResponseManager {
 
     public void getRandomImages(final ApiCallback<RandomImageResponse> callback) {
         RandomImagesService service = client.create(RandomImagesService.class);
-        service.getRandomImagesResponse().enqueue(new Callback<List<RandomImageResponse>>() {
+        service.getRandomImagesResponse(2, 100).enqueue(new Callback<List<RandomImageResponse>>() {
             @Override
             public void onResponse(Call<List<RandomImageResponse>> call, Response<List<RandomImageResponse>> response) {
                 if (response.isSuccessful()) {

@@ -76,4 +76,25 @@ public class RandomImageResponse {
         this.downloadUrl = downloadUrl;
     }
 
+
+    @Override public boolean equals(Object obj) {
+        if (obj instanceof RandomImageResponse) {
+            RandomImageResponse other = (RandomImageResponse) obj;
+            return id.equals(other.id)
+                    && author.equals(other.author)
+                    && width == other.width
+                    && height == other.height
+                    && url == other.url
+                    && downloadUrl == other.downloadUrl;
+        } else {
+            return false;
+        }
+    }
+
+
+//    @Override
+//    public int hashCode() {
+//        return id.hashCode();
+//    }
+
 }
